@@ -39,10 +39,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        MainActivity mainActivity = new MainActivity();
         holder.name.setText(localDataSet.get(position).getName());
         holder.quantity.setText(String.valueOf(localDataSet.get(position).getQuantity()));
-        //profile은 어떻게 하지...
+        Glide.with(holder.profile.getContext()).load(localDataSet.get(position).getProfile()).into(holder.profile);
     }
 
     //총 아이템의 개수 반환

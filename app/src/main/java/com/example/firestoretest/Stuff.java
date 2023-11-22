@@ -8,9 +8,10 @@ public class Stuff {
     //생성자
     public Stuff() {}
     //혹시 몰라서 만든 생성자 -> 데이터를 쓸 때 필요할지도?
-    public Stuff(String name, int quantity) {
+    public Stuff(String name, int quantity, String profile) {
         this.name = name;
         this.quantity = quantity;
+        this.profile = profile;
     }
 
     //getter, setter
